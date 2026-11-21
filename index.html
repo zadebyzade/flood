@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SiPADU memuat peta risiko, data historis, dan pencarian orang hilang terkait bencana banjir di Indonesia.">
+  <title>SiPADU | Informasi Banjir Indonesia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <nav id="navbar" class="masthead" aria-label="Navigasi utama">
+    <div class="container masthead__inner">
+      <a class="wordmark" href="#beranda" aria-label="SiPADU, kembali ke beranda">
+        <span class="wordmark__mark" aria-hidden="true"></span>
+        <span>SiPADU</span>
+      </a>
+      <button id="hamburger" class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-button__label">Menu</span>
+        <span class="menu-button__bars" aria-hidden="true"></span>
+      </button>
+      <ul id="desktop-menu" class="nav-list">
+        <li><a class="nav-link" href="#tentang">Tentang</a></li>
+        <li><a class="nav-link" href="#mitigasi">Mitigasi</a></li>
+        <li><a class="nav-link" href="#peta">Peta</a></li>
+        <li><a class="nav-link" href="#data">Data</a></li>
+        <li><a class="nav-link" href="#korban">Korban</a></li>
+        <li><a class="nav-link" href="#hilang">Orang hilang</a></li>
+        <li><a class="nav-link" href="#statistik">Statistik</a></li>
+      </ul>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <div class="container">
+        <a class="mobile-link" href="#tentang">Tentang</a>
+        <a class="mobile-link" href="#mitigasi">Mitigasi</a>
+        <a class="mobile-link" href="#peta">Peta</a>
+        <a class="mobile-link" href="#data">Data</a>
+        <a class="mobile-link" href="#korban">Korban</a>
+        <a class="mobile-link" href="#hilang">Orang hilang</a>
+        <a class="mobile-link" href="#statistik">Statistik</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="beranda" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="system-status"><span aria-hidden="true"></span> Sistem aktif</p>
+          <h1>Sistem Informasi Banjir Indonesia</h1>
+          <p class="lead">Peta risiko, data historis, dan pencarian orang hilang dalam satu layanan publik.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#peta">Lihat peta rawan</a>
+            <a class="btn btn--quiet" href="#data">Buka data</a>
+          </div>
+        </div>
+        <aside class="hero__board" aria-label="Ringkasan data banjir">
+          <header class="board__head">
+            <span>Ringkasan</span>
+            <span>Data lokal</span>
+          </header>
+          <dl class="board__stats">
+            <div><dt>Kejadian</dt><dd id="stat-kejadian" class="figure">0</dd></div>
+            <div><dt>Korban jiwa</dt><dd id="stat-korban" class="figure">0</dd></div>
+            <div><dt>Pengungsi</dt><dd id="stat-pengungsi" class="figure">0</dd></div>
+            <div><dt>Provinsi</dt><dd id="stat-provinsi" class="figure">0</dd></div>
+          </dl>
+          <footer class="board__foot">
+            <span>Sumber nasional</span>
+            <span>Data periodik</span>
+          </footer>
+        </aside>
+      </div>
+    </section>
+
+    <section id="tentang" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Apa itu banjir</h2>
+          <p class="lead">Terbenamnya daratan ketika air melampaui kapasitas sungai, saluran, atau danau.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>Banjir adalah peristiwa hidrometeorologi yang sering terjadi di Indonesia. Kondisi memburuk saat aliran air naik cepat atau permukaan pesisir mengalami rob.</p>
+          </div>
+          <div class="flood-types">
+            <div><strong>Bandang</strong><span>Naik cepat, aliran kuat</span></div>
+            <div><strong>Genangan</strong><span>Air menetap di daratan</span></div>
+            <div><strong>Rob</strong><span>Pasang air laut ke darat</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mitigasi" class="section section--paper">
+      <div class="container">
+        <div class="section-head">
+          <h2>Mitigasi lapangan</h2>
+          <p class="lead">Tiga langkah yang mengikuti fase bencana.</p>
+        </div>
+        <ol class="mitigation-grid">
+          <li><span class="step-number">1</span><div><h3>Sebelum</h3><p>Siapkan tas siaga, kenali jalur evakuasi, dan simpan nomor darurat BPBD 117 atau Basarnas 115.</p></div></li>
+          <li><span class="step-number">2</span><div><h3>Saat</h3><p>Evakuasi ke tempat lebih tinggi, matikan listrik, dan hindari arus serta kabel terendam.</p></div></li>
+          <li><span class="step-number">3</span><div><h3>Sesudah</h3><p>Tunggu izin pihak berwenang sebelum kembali dan laporkan kerusakan untuk pendataan bantuan.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="peta" class="section">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <h2>Peta wilayah rawan</h2>
+          <p>Pilih marker untuk membaca risiko dan rekomendasi.</p>
+        </div>
+        <div class="map-frame">
+          <div id="map" role="region" aria-label="Peta wilayah rawan banjir"></div>
+        </div>
+        <div class="risk-tally" aria-label="Jumlah zona risiko">
+          <div><span>Tinggi</span><strong id="count-high" class="figure">0</strong></div>
+          <div><span>Sedang</span><strong id="count-medium" class="figure">0</strong></div>
+          <div><span>Rendah</span><strong id="count-low" class="figure">0</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="data" class="section section--ink">
+      <div class="container">
+        <div class="section-head section-head--ink">
+          <h2>Data historis</h2>
+          <p>Saring kejadian berdasarkan nama lokasi, jenis, atau tahun.</p>
+        </div>
+        <div class="filters" aria-label="Penyaring data">
+          <label>Cari<input id="search-table" type="search" placeholder="Provinsi atau kabupaten"></label>
+          <label>Jenis<select id="filter-jenis"><option value="">Semua jenis</option><option value="Bandang">Bandang</option><option value="Genangan">Genangan</option><option value="Rob">Rob</option></select></label>
+          <label>Tahun<select id="filter-tahun"><option value="">Semua tahun</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option></select></label>
+          <button id="reset-filter" class="btn btn--quiet btn--ink" type="button">Reset</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Tanggal</th><th>Provinsi</th><th>Kabupaten</th><th>Jenis</th><th class="num">Tinggi (cm)</th><th class="num">Korban</th><th class="num hide-mobile">Pengungsi</th><th class="num hide-mobile">Kerugian (Jt)</th><th class="hide-mobile">Sumber</th></tr></thead>
+            <tbody id="table-body"></tbody>
+          </table>
+          <div id="table-footer" class="table-footer"><span id="table-count">Menampilkan 0 data</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="korban" class="section">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <h2>Korban jiwa</h2>
+          <p>Ringkasan dampak berdasarkan laporan BMKG dan BNPB.</p>
+        </div>
+        <div class="victim-tally">
+          <div><span>Meninggal</span><strong id="total-jiwa" class="figure">0</strong></div>
+          <div><span>Luka-luka</span><strong id="total-luka" class="figure">0</strong></div>
+          <div><span>Mengungsi</span><strong id="total-pengungsi-korban" class="figure">0</strong></div>
+        </div>
+        <div class="filters filters--inline">
+          <label>Cari lokasi<input id="search-korban" type="search" placeholder="Provinsi atau lokasi"></label>
+          <label>Tahun<select id="filter-korban-tahun"><option value="">Semua tahun</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option></select></label>
+        </div>
+        <div id="korban-grid" class="korban-grid"></div>
+      </div>
+    </section>
+
+    <section id="hilang" class="section section--paper">
+      <div class="container">
+        <div class="section-head">
+          <h2>Pencarian orang hilang</h2>
+          <p class="lead">Cari laporan atau kirim data orang yang belum ditemukan.</p>
+        </div>
+        <div class="missing-layout">
+          <div class="search-panel">
+            <h3>Cari laporan</h3>
+            <div class="missing-search">
+              <label>Nama<input id="search-nama" type="search" placeholder="Nama lengkap"></label>
+              <label>NIK<input id="search-nik" type="search" placeholder="Nomor NIK" inputmode="numeric"></label>
+              <label>Provinsi<select id="search-provinsi"><option value="">Semua provinsi</option></select></label>
+              <label>Status<select id="search-status-hilang"><option value="">Semua status</option><option value="hilang">Hilang</option><option value="ditemukan">Ditemukan</option><option value="meninggal">Meninggal</option></select></label>
+              <button id="btn-search-hilang" class="btn btn--primary" type="button">Cari sekarang</button>
+            </div>
+            <div id="hilang-results" class="missing-results"></div>
+          </div>
+          <form id="form-lapor" class="report-form">
+            <h3>Laporkan orang hilang</h3>
+            <div class="form-grid">
+              <label>Nama lengkap *<input name="nama_lengkap" type="text" required></label>
+              <label>NIK<input name="nik" type="text" maxlength="16"></label>
+              <label>Usia<input name="usia" type="number" min="1" max="120"></label>
+              <label>Jenis kelamin<select name="jenis_kelamin"><option value="L">Laki-laki</option><option value="P">Perempuan</option></select></label>
+              <label class="span-2">Provinsi *<select name="provinsi" required><option value="">Pilih provinsi</option></select></label>
+              <label class="span-2">Lokasi terakhir terlihat *<input name="terakhir_terlihat_lokasi" type="text" required></label>
+              <label class="span-2">Tanggal terakhir terlihat<input name="terakhir_terlihat_tanggal" type="date"></label>
+              <label class="span-2">Keterangan / ciri fisik<textarea name="keterangan" rows="3"></textarea></label>
+              <label>Nama pelapor *<input name="pelapor_nama" type="text" required></label>
+              <label>No. telp pelapor *<input name="pelapor_telp" type="tel" required></label>
+            </div>
+            <button type="submit" class="btn btn--primary">Kirim laporan</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="statistik" class="section">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <h2>Kejadian per tahun</h2>
+          <p>Catatan tahunan dalam basis data SiPADU.</p>
+        </div>
+        <div class="chart-frame"><canvas id="chart-pertahun" aria-label="Grafik kejadian banjir per tahun"></canvas></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="wordmark wordmark--footer">SiPADU</p>
+        <p>Sistem informasi penanggulangan banjir Indonesia.</p>
+      </div>
+      <div>
+        <p>Darurat BPBD 117</p>
+        <p>Basarnas 115</p>
+      </div>
+      <a class="back-link" href="#beranda">Kembali ke atas</a>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden><span id="toast-inner"><span id="toast-msg"></span></span></div>
+
+  <script src="js/db.js"></script>
+  <script src="js/table.js"></script>
+  <script src="js/missing.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/charts.js?v=20261121"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

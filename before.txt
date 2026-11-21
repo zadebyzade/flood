@@ -1,0 +1,73 @@
+FAIL 6a index.html:76 hero sized in vh: min-h-screen on <section class="pt-16 min-h-screen bg-gradient-…"> | fix: min-h-dvh or min-h-svh
+FAIL 10a index.html:39 transition-all on <nav class="fixed top-0 w-full z-50 bg-prim…"> | fix: Name the properties: transition-colors, transition-opacity or transition-transform
+FAIL 19 index.html:6 dash "—" in copy | fix: A comma, a colon, a full stop or parentheses; never a dash
+FAIL 27 index.html:78 motion utilities (animate-pulse) with no motion-reduce: or motion-safe: variant anywhere | fix: Add motion-reduce: fallbacks, or put the motion behind motion-safe:
+FAIL 30a index.html:79 text opens with an emoji: "⚠️ SISTEM INFORMASI AKTIF — DAT…" | fix: One icon library, a custom SVG, or the word alone
+FAIL 30a index.html:131 emoji icon "🌊" in <div class="text-3xl mb-2"> | fix: One icon library or custom SVG
+FAIL 30a index.html:136 emoji icon "🌊" in <div class="text-3xl mb-2"> | fix: One icon library or custom SVG
+FAIL 30a index.html:141 emoji icon "💧" in <div class="text-3xl mb-2"> | fix: One icon library or custom SVG
+FAIL 30a index.html:151 emoji icon "🌧️" in <div class="text-2xl mb-3"> | fix: One icon library or custom SVG
+FAIL 30a index.html:156 emoji icon "🌲" in <div class="text-2xl mb-3"> | fix: One icon library or custom SVG
+FAIL 30a index.html:161 emoji icon "🏙️" in <div class="text-2xl mb-3"> | fix: One icon library or custom SVG
+FAIL 30a index.html:166 emoji icon "🗑️" in <div class="text-2xl mb-3"> | fix: One icon library or custom SVG
+FAIL 30a index.html:188 emoji icon "▶" in <span class="text-warning mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:189 emoji icon "▶" in <span class="text-warning mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:190 emoji icon "▶" in <span class="text-warning mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:191 emoji icon "▶" in <span class="text-warning mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:192 emoji icon "▶" in <span class="text-warning mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:193 emoji icon "▶" in <span class="text-warning mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:202 emoji icon "▶" in <span class="text-danger mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:203 emoji icon "▶" in <span class="text-danger mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:204 emoji icon "▶" in <span class="text-danger mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:205 emoji icon "▶" in <span class="text-danger mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:206 emoji icon "▶" in <span class="text-danger mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:207 emoji icon "▶" in <span class="text-danger mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:216 emoji icon "▶" in <span class="text-safe mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:217 emoji icon "▶" in <span class="text-safe mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:218 emoji icon "▶" in <span class="text-safe mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:219 emoji icon "▶" in <span class="text-safe mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:220 emoji icon "▶" in <span class="text-safe mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:221 emoji icon "▶" in <span class="text-safe mt-1"> | fix: One icon library or custom SVG
+FAIL 30a index.html:383 emoji in <h3> "🔍 Cari Orang Hilang" | fix: One icon library, a custom SVG, or the word alone
+FAIL 30a index.html:406 emoji in <h3> "📢 Laporkan Orang Hilang" | fix: One icon library, a custom SVG, or the word alone
+FAIL 33 index.html:43 <svg> without aria-hidden or aria-label | fix: Add aria-hidden or an aria-label
+FAIL 33 index.html:59 <svg> without aria-hidden or aria-label | fix: Add aria-hidden or an aria-label
+FAIL 34 index.html:1 no overflow-x: clip on html and body | fix: overflow-x: clip on both html and body
+FAIL 54 index.html:83 eyebrow "Platform Kebencanaan" before <h1> (uppercase, tracked 0.1em at 12px) | fix: Cut it; open the section another way (craft.md, Opening a section)
+FAIL 54 index.html:121 eyebrow "Edukasi" before <h2> (uppercase, tracked 0.1em at 14px) | fix: Cut it; open the section another way (craft.md, Opening a section)
+FAIL 54 index.html:178 eyebrow "Keselamatan" before <h2> (uppercase, tracked 0.1em at 14px) | fix: Cut it; open the section another way (craft.md, Opening a section)
+FAIL 54 index.html:232 eyebrow "Pemetaan" before <h2> (uppercase, tracked 0.1em at 14px) | fix: Cut it; open the section another way (craft.md, Opening a section)
+FAIL 54 index.html:266 eyebrow "Database" before <h2> (uppercase, tracked 0.1em at 14px) | fix: Cut it; open the section another way (craft.md, Opening a section)
+FAIL 54 index.html:334 eyebrow "In Memoriam" before <h2> (uppercase, tracked 0.1em at 14px) | fix: Cut it; open the section another way (craft.md, Opening a section)
+FAIL 54 index.html:376 eyebrow "Bantuan Darurat" before <h2> (uppercase, tracked 0.1em at 14px) | fix: Cut it; open the section another way (craft.md, Opening a section)
+FAIL 67 index.html:83 "Platform Kebencanaan" uppercase at 12px tracked 0.1em on <span class="inline-block bg-accent text-whi…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:121 "Edukasi" uppercase at 14px tracked 0.1em on <span class="text-accent font-bold text-sm u…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:178 "Keselamatan" uppercase at 14px tracked 0.1em on <span class="text-accent font-bold text-sm u…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:232 "Pemetaan" uppercase at 14px tracked 0.1em on <span class="text-accent font-bold text-sm u…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:266 "Database" uppercase at 14px tracked 0.1em on <span class="text-accent font-bold text-sm u…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:273 "Cari" uppercase at 12px on <label class="text-xs font-semibold text-gray…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:277 "Jenis Banjir" uppercase at 12px on <label class="text-xs font-semibold text-gray…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:286 "Tahun" uppercase at 12px on <label class="text-xs font-semibold text-gray…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:334 "In Memoriam" uppercase at 14px tracked 0.1em on <span class="text-accent font-bold text-sm u…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:376 "Bantuan Darurat" uppercase at 14px tracked 0.1em on <span class="text-accent font-bold text-sm u…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:410 "Nama Lengkap *" uppercase at 12px on <label class="text-xs text-gray-500 font-semi…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:414 "NIK" uppercase at 12px on <label class="text-xs text-gray-500 font-semi…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:420 "Usia" uppercase at 12px on <label class="text-xs text-gray-500 font-semi…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:424 "Jenis Kelamin" uppercase at 12px on <label class="text-xs text-gray-500 font-semi…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:432 "Provinsi *" uppercase at 12px on <label class="text-xs text-gray-500 font-semi…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:438 "Lokasi Terakhir Terliha…" uppercase at 12px on <label class="text-xs text-gray-500 font-semi…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:442 "Tanggal Terakhir Terlih…" uppercase at 12px on <label class="text-xs text-gray-500 font-semi…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:446 "Keterangan / Ciri Fisik" uppercase at 12px on <label class="text-xs text-gray-500 font-semi…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:451 "Nama Pelapor *" uppercase at 12px on <label class="text-xs text-gray-500 font-semi…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+FAIL 67 index.html:455 "No. Telp Pelapor *" uppercase at 12px on <label class="text-xs text-gray-500 font-semi…"> | fix: Sentence case in the body face, a step smaller, untracked: drop uppercase and the tracking-* class
+REFLEX 26b index.html:1 no :active styling anywhere | fix: All eight states; guard: not a form control, no aria-disabled anywhere
+REFLEX 26b index.html:1 no :disabled styling anywhere | fix: All eight states; guard: not a form control, no aria-disabled anywhere
+WARN 29 index.html:97 glass: backdrop-blur over bg-white/10 on <div class="bg-white/10 backdrop-blur round…"> | fix: Solid or grained surface; elevation by lightness, shadows with offset and blur
+WARN 29 index.html:101 glass: backdrop-blur over bg-white/10 on <div class="bg-white/10 backdrop-blur round…"> | fix: Solid or grained surface; elevation by lightness, shadows with offset and blur
+WARN 29 index.html:105 glass: backdrop-blur over bg-white/10 on <div class="bg-white/10 backdrop-blur round…"> | fix: Solid or grained surface; elevation by lightness, shadows with offset and blur
+WARN 29 index.html:109 glass: backdrop-blur over bg-white/10 on <div class="bg-white/10 backdrop-blur round…"> | fix: Solid or grained surface; elevation by lightness, shadows with offset and blur
+WARN 58 index.html:1 516 visible words on the page (450 at most) | fix: Cut copy: one idea per screen, sections become objects
+WARN 58 index.html:89 hero paragraph runs 16 words | fix: One sentence, twelve words or fewer
+WARN 74 index.html:126 default palette instead of theme tokens: 34 distinct palette classes (bg-gray-50 text-gray-800 text-blue-200 bg-orange-… | fix: Extend the Tailwind theme with the Hallmark tokens and use those names
+WARN F23 index.html:1 the document lacks a meta description | fix: Name the language, title the page in its own words, and describe it in one sentence for link previews
+WARN F24 index.html:243 a hairline border under a wide soft shadow (border with shadow-xl or shadow-2xl) | fix: Commit to one: a defined edge, or elevation by shadow
